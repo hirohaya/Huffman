@@ -4,7 +4,7 @@
 
 typedef struct node{
     char symbol;
-    int freq;
+    double freq;
     int isRight; /*1 significa que esta a direita, 0 esta a esquerda*/
     struct node *father;
     struct node *next;
