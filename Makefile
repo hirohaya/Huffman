@@ -1,9 +1,9 @@
 CC=gcc
-CFLAGS=-c -ansi -pedantic -O2 -Wall -g
+CFLAGS=-c -ansi -pedantic -Wall -g #-O2
 LDFLAGS=
 SOURCES= main.c tree.c character.c list.c
 OBJECTS=$(SOURCES:.c=.o)
-EXECUTABLE=compressor
+EXECUTABLE=compactador
 
 all: $(SOURCES) $(EXECUTABLE)
 
