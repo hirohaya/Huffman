@@ -5,7 +5,7 @@
 typedef struct node{
     char symbol;
     double freq;
-    int isRight; /*1 significa que esta a direita, 0 esta a esquerda*/
+    int isLeft; /*1 significa que esta a esquerda, 0 esta a direita, -1 se ainda nao foi definido*/
     struct node *father;
     struct node *next;
 } Node;
@@ -35,6 +35,7 @@ void rem_node();
 void print_queue();
 int get_size();
 void create_leaves();
+void create_queue();
 
 #endif /*H_LIST*/
 
