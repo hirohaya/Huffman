@@ -7,6 +7,7 @@
 
 Queue *p_queue;
 Node **leaves;
+double characters[126];
 
 
 
@@ -19,6 +20,17 @@ void init_queue(){
 
 
 
+void create_queue(){
+
+  int i;
+  	for(i = 0; i < 126; i++)
+		if(characters[i] > 0) 
+			insert_node((create_node((i+1), characters[i])));
+
+}
+
+	
+	
 Node *create_node(char symbol, double freq){
 
   Node *new;
@@ -28,6 +40,7 @@ Node *create_node(char symbol, double freq){
 	new->freq = freq;
 	new->father = NULL;
 	new->next = NULL;
+	new->isLeft = -1;
 
 	return new;
 }
@@ -75,11 +88,7 @@ void insert_node(Node *node){
 
 void rem_node(){
 
-  Node *p;
-
-  	p = p_queue->start;
 	p_queue->start = (p_queue->start)->next;
-	free(p);
 }
 
 
@@ -89,7 +98,7 @@ void print_queue(){
   Node *p;
 
       for(p = p_queue->start; p != NULL; p = p->next)
-	      printf("Caracter: %c       Frequencia: %f%%\n", p->symbol, p->freq);
+	      printf("Caracter: %c       Frequencia: %f%% ", p->symbol, p->freq);
 }
 
 
