@@ -23,10 +23,18 @@ typedef struct queue{
 
 
 
-extern Queue p_queue; /*Lista de prioridade*/
+extern Queue *p_queue; /*Lista de prioridade*/
+extern Node **leaves; /*Vetor contendo o endereco das folhas*/
+
 
 	
 void init_queue();
+Node *create_node(char symbol, double freq);
 void insert_node(Node *node);
+void rem_node();
+void print_queue();
+int get_size();
+void create_leaves();
 
 #endif /*H_LIST*/
+
