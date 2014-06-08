@@ -34,15 +34,13 @@ void count_characters(char *file_name){
 
 	for(i = 0; i < 126; i++) characters[i] = characters[i]/nchar * 100;
 	/*Print para testes do array de caracteres*/
-	for(i = 0; i < 126; i++){
+	/*for(i = 0; i < 126; i++){
 		if((characters[i] > 0 && i >= 31 && i <= 125) || i == 9 || i == 8){
 			if(i == 9) printf("Newline tem frequencia de %f%%.\n", characters[i]);
 			else if(i == 8)	printf("TAB tem frequencia de %f%%.\n", characters[i]);
 			else	printf("%c tem frequencia de %f%%.\n", (i+1), characters[i]);
 		}
-	}
+	}*/
 	fclose(pFile);
 }
-
-
 
