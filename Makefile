@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-c -ansi -pedantic -O2 -Wall -g
 LDFLAGS=
-SOURCES= main.c tree.c character.c
+SOURCES= main.c tree.c character.c list.c
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=compressor
 
